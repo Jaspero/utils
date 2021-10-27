@@ -26,5 +26,15 @@
   "devDependencies": {
     "typescript": "4.4.4",
     "semantic-release": "18.0.0"
-  }
+  },
+  "keywords": [
+    "jaspero",
+    "utils",
+    "web",
+    "utilities",
+    "javascript",
+    "typescript",
+    "helper",
+    "tools"
+  ]
 }
