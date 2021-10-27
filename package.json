@@ -1,8 +1,8 @@
 {
   "name": "@jaspero/utils",
   "version": "0.0.0-development",
-  "description": "",
-  "main": "index.js",
+  "description": "Collection of Jaspero utils",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "semantic-release": "semantic-release"
@@ -11,8 +11,14 @@
     "type": "git",
     "url": "https://github.com/Jaspero/utils.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Jaspero Ltd",
+    "email": "info@jaspero.co"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/Jaspero/utils/issues"
   },
