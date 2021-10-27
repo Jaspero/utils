@@ -1,13 +1,9 @@
 name: Release
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
-    paths:
-      - 'package.json'
-      - 'package-lock.json'
-      - 'src/**/*'
-      - '.github/workflows/release.yml'
 jobs:
   release:
     name: Release
