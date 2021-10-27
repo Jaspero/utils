@@ -4,7 +4,7 @@
  * parseTemplate('Hello {{name}}!', {name: 'John'})
  * parseTemplate('My city {{address.city}}', {address: {city: 'London'}})
  */
- export const parseTemplate = (
+ export function parseTemplate(
     value = '',
     obj: any = {},
 
@@ -14,7 +14,7 @@
      */
     accessor?: (key: string, entry: any) => any,
     returnOriginal?: boolean
-) => {
+) {
 
     if (!accessor) {
         accessor = (key, entry) => key

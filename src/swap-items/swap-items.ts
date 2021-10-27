@@ -4,12 +4,12 @@
  * @param currentIndex - number
  * @param mutate - mutate original array, or return swapped
  */
-export const swapItems = (
+export function swapItems(
     items: any[],
     previousIndex: number,
     currentIndex: number,
     mutate = true
-): void | any[] => {
+): void | any[] {
 
     const copy = mutate ? items : [...items];
 

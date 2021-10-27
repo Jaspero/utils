@@ -16,7 +16,7 @@ const defaultPrecisionMap: UnitPrecisionMap = {
  * Convert bytes into largest possible unit.
  * Takes an precision argument that can be a number or a map for each unit.
  */
-export const parseSize = (bytes: number = 0, precision: number | UnitPrecisionMap = defaultPrecisionMap): string => {
+export function parseSize(bytes: number = 0, precision: number | UnitPrecisionMap = defaultPrecisionMap): string {
 
     const units: Unit[] = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
 

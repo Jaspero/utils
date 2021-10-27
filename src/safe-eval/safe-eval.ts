@@ -1,4 +1,4 @@
-export const safeEval = (method: string | Function) => {
+export function safeEval(method: string | Function) {
     if (typeof method !== 'string') {
         return method;
     }
