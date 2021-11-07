@@ -2,23 +2,15 @@
  * Converts string representation of file size
  * in to a number
  */
-export function sizeToBytes(size: string | number) {
+export function sizeToBytes(size: string | number): number {
   if (typeof size === 'number') {
     return size;
   }
 
-  const KB = 1024;
-  const MB = KB ** 2;
-
-  const num = parseFloat(size);
-  const unit = size.replace(/[0-9]/g, '').toLowerCase();
-
-  switch (unit) {
-    case 'kb':
-      return num * KB;
-    case 'mb':
-      return num * MB;
-    default:
-      return 0;
-  }
+  const units = [['bytes', 'b'], 'kb', 'mb', 'gb', 'tb', 'pb'];
+  const unit = size.replace(/[0-9.]/g, '').toLowerCase().replace(/\s/g, '');
+  const power = units.findIndex(item => Array.isArray(item) ? item.includes(unit) : item === unit);
+  return power === -1
+      ? 0
+      : (parseFloat(size) || 0) * Math.pow(1024, power);
 }
