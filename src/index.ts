@@ -9,6 +9,7 @@ export * from './safe-eval/safe-eval';
 export * from './parse-template/parse-template';
 export * from './swap-items/swap-items';
 export * from './round-accurately/round-accurately';
+export * from './capitalize/capitalize';
 
 /**
  * Consts
