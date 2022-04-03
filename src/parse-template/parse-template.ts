@@ -26,7 +26,7 @@
     }
 
     if (!value.includes('{{')) {
-        return returnOriginal ? value : obj[value];
+        return returnOriginal ? value : accessor(value, obj);
     } else {
 
         const lookUp = new RegExp(`{{(.*?)}}`);
