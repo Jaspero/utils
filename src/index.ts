@@ -14,6 +14,6 @@ export * from './capitalize/capitalize';
 export * from './to-label/to-label';
 
 /**
- * Consts
+ * Constants
  */
 export * from './consts/characters.const';

@@ -20,5 +20,12 @@ export const random = {
     },
     float: (a = 0, b = 1): number => {
         return Math.random() * (b - a) + a;
+    },
+    uuid: (): string => {
+        const sections = [8, 4, 4, 4, 12];
+
+        return sections.map(section => {
+            return random.string(section);
+        }).join('-');
     }
 };
