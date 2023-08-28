@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/Jaspero/utils#readme",
   "devDependencies": {
-    "typescript": "4.4.4",
-    "semantic-release": "18.0.0"
+    "semantic-release": "18.0.0",
+    "typescript": "4.4.4"
   },
   "keywords": [
     "jaspero",
@@ -36,5 +36,8 @@
     "typescript",
     "helper",
     "tools"
-  ]
+  ],
+  "dependencies": {
+    "deepcopy": "2.1.0"
+  }
 }

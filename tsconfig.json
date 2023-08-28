@@ -10,8 +10,8 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "lib": [
-      "es2015",
-      "ES2016"
-    ]
+      "ES2017"
+    ],
+    "noImplicitAny": false
   }
 }
