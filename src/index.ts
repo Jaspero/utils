@@ -12,6 +12,9 @@ export * from './swap-items/swap-items';
 export * from './round-accurately/round-accurately';
 export * from './capitalize/capitalize';
 export * from './to-label/to-label';
+export * from './deep-equal/deep-equal';
+export * from './deep-copy/deep-copy';
+export * from './form/form';
 
 /**
  * Constants
