@@ -16,9 +16,11 @@ export function deepEqual(a: any, b: any): boolean {
 
     if ((a instanceof Map) && (b instanceof Map)) {
       if (a.size !== b.size) return false;
+      // @ts-ignore
       for (const entry of a.entries()) {
         if (!b.has(entry[0])) return false;
       }
+      // @ts-ignore
       for (const entry of a.entries()) {
         if (!deepEqual(entry[1], b.get(entry[0]))) return false;
       }
@@ -27,6 +29,7 @@ export function deepEqual(a: any, b: any): boolean {
 
     if ((a instanceof Set) && (b instanceof Set)) {
       if (a.size !== b.size) return false;
+      // @ts-ignore
       for (const value of a.values()) {
         if (!b.has(value)) return false;
       }
