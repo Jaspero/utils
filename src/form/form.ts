@@ -92,6 +92,15 @@ export class Validators {
       error: 'This field is not a valid URL'
     };
   }
+
+  static pattern(pattern: RegExp) {
+    return (value: string) => {
+      return {
+        valid: pattern.test(value),
+        error: `This field is not valid`
+      };
+    };
+  }
 }
 
 export type ValidatorFn<T> = (value: T) => {
