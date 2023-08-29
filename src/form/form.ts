@@ -101,6 +101,15 @@ export class Validators {
       };
     };
   }
+
+  static enum(values: any[]) {
+    return (value: any) => {
+      return {
+        valid: values.some(item => deepEqual(item, value)),
+        error: `This field is not valid. Must be one of: ${values.join(', ')}`
+      };
+    };
+  }
 }
 
 export type ValidatorFn<T> = (value: T) => {
