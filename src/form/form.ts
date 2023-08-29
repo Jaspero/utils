@@ -93,10 +93,10 @@ export class Validators {
     };
   }
 
-  static pattern(pattern: RegExp) {
+  static pattern(pattern: RegExp | string) {
     return (value: string) => {
       return {
-        valid: pattern.test(value),
+        valid: new RegExp(pattern).test(value),
         error: `This field is not valid`
       };
     };
