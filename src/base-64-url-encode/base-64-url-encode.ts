@@ -7,5 +7,5 @@ export function base64UrlEncode(value: any, stringify = true) {
     return btoa(value)
         .replace(/\+/g, '-')
         .replace(/\//g, '_')
-        .replace(/=/g, '.');
+        .replace(/\=/g, '.');
 }

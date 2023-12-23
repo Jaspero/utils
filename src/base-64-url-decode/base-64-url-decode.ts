@@ -4,7 +4,7 @@ export function base64UrlDecode(value: string, parse = true) {
         value
             .replace(/\-/g, '+')
             .replace(/\_/g, '/')
-            .replace(/./g, '=')
+            .replace(/\./g, '=')
     );
 
     if (parse) {
