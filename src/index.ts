@@ -17,6 +17,8 @@ export * from './deep-copy/deep-copy';
 export * from './form/form';
 export * from './format-email/format-email';
 export * from './clean-slug/clean-slug';
+export * from './base-64-url-decode/base-64-url-decode';
+export * from './base-64-url-encode/base-64-url-encode';
 
 /**
  * Constants
