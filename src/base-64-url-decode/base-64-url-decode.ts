@@ -1,4 +1,5 @@
 export function base64UrlDecode(value: string, parse = true) {
+    // @ts-ignore
     value = atob(
         value
             .replace(/\-/g, '+')
