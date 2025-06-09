@@ -12,5 +12,5 @@ export function base64UrlDecode<T = any>(value: string, parse = true) {
         value = JSON.parse(value);
     }
 
-    return value as T;
+    return value as unknown as T;
 }
