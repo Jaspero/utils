@@ -5,5 +5,8 @@ export function base64UrlEncode(value: any, stringify = true) {
     value = JSON.stringify(value);
   }
 
-  return Base64.encode(value);
+  return Base64.encode(value)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/\=/g, ".");
 }
