@@ -1,11 +1,9 @@
-export function base64UrlEncode(value: any, stringify = true) {
-    if (stringify) {
-        value = JSON.stringify(value);
-    }
+import { Base64 } from "../base64";
 
-    // @ts-ignore
-    return btoa(value)
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/\=/g, '.');
+export function base64UrlEncode(value: any, stringify = true) {
+  if (stringify) {
+    value = JSON.stringify(value);
+  }
+
+  return Base64.encode(value);
 }

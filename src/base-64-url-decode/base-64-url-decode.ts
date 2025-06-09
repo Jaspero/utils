@@ -1,16 +1,11 @@
+import { Base64 } from "../base64";
+
 export function base64UrlDecode<T = any>(value: string, parse = true) {
-    
-    // @ts-ignore
-    value = atob(
-        value
-            .replace(/\-/g, '+')
-            .replace(/\_/g, '/')
-            .replace(/\./g, '=')
-    );
+  value = Base64.decode(value);
 
-    if (parse) {
-        value = JSON.parse(value);
-    }
+  if (parse) {
+    value = JSON.parse(value);
+  }
 
-    return value as unknown as T;
+  return value as unknown as T;
 }
