@@ -1,4 +1,4 @@
-export function base64UrlDecode(value: string, parse = true) {
+export function base64UrlDecode<T = any>(value: string, parse = true) {
     
     // @ts-ignore
     value = atob(
@@ -12,5 +12,5 @@ export function base64UrlDecode(value: string, parse = true) {
         value = JSON.parse(value);
     }
 
-    return value;
+    return value as T;
 }
